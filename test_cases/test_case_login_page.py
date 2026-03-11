@@ -24,7 +24,8 @@ class Test_login_page():
         self.login.fill_password_input(read_popertice.get_password())
         self.login.click_login_btn()
         #chacking the title for the test cases are passed
-        act_title = self.driver.title
-        exp_title = "Automation Exercise - Signup / Login"
-        assert act_title == exp_title,"The title is not matching. chack the code"
+
+        login_user = self.driver.find_element(By.XPATH,"//a[contains(text(),' Logged in as ')]")
+        assert login_user.is_displayed(), "Login fail chack the massage. "
+        
        
