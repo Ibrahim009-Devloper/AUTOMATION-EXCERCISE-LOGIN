@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from base_pages.login_page import LoginPage
 from utilities.read_popertice import read_popertice
 from selenium.webdriver.common.by import By
@@ -25,7 +27,7 @@ class Test_login_page():
         self.login.click_login_btn()
         #chacking the title for the test cases are passed
 
-        login_user = self.driver.find_element(By.XPATH,"//a[contains(text(),' Logged in as ')]")
+        login_user = WebDriverWait(self.driver,30).until(EC.presence_of_element_located((By.XPATH,"//a[contains(text(),' Logged in as ')]")))
         assert login_user.is_displayed(), "Login fail chack the massage. "
         
        
