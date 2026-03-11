@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from base_pages.login_page import LoginPage
 from utilities.read_popertice import read_popertice
+from selenium.webdriver.common.by import By
 
 
 
