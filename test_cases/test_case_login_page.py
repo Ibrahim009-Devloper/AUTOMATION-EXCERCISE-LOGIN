@@ -25,6 +25,6 @@ class Test_login_page():
         self.login.click_login_btn()
         #chacking the title for the test cases are passed
         act_title = self.driver.title
-        exp_title = "Automation Exercise"
+        exp_title = "Automation Exercise - Signup / Login"
         assert act_title == exp_title,"The title is not matching. chack the code"
        
