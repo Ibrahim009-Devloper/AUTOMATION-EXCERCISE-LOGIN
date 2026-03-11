@@ -12,7 +12,7 @@ class Test_login_page():
         act_title = self.driver.title
         exp_title = "Automation Exercise"
         assert act_title == exp_title,"The title is not matched, you enterd in the wrong website"
-        self.driver.quit()
+        
 
     def test_valid_login(self,setup):
         self.driver = setup
@@ -26,4 +26,4 @@ class Test_login_page():
         act_title = self.driver.title
         exp_title = "Automation Exercise"
         assert act_title == exp_title,"The title is not matching. chack the code"
-        self.driver.quit()
+       
